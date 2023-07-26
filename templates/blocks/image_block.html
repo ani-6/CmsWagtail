@@ -1,0 +1,6 @@
+{% load wagtailimages_tags %}
+
+<figure>
+    {% image self.image scale-70 loading="lazy" %}
+    <figcaption>{{ self.caption }} - {{ self.attribution }}</figcaption>
+</figure>
