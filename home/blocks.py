@@ -25,6 +25,23 @@ class ImageBlock(StructBlock):
         icon = "image"
         template = "blocks/image_block.html"
 
+class EmbedImageBlock(StructBlock):
+    imagelink = CharBlock(required=True)
+    caption = CharBlock(required=False)
+    attribution = CharBlock(required=False)
+
+    class Meta:
+        icon = "image"
+        template = "blocks/embedimage_block.html"
+
+class EmbedVideoBlock(StructBlock):
+    videolink = CharBlock(required=True)
+    caption = CharBlock(required=False)
+    attribution = CharBlock(required=False)
+
+    class Meta:
+        icon = "media"
+        template = "blocks/embedvideo_block.html"
 
 class HeadingBlock(StructBlock):
     """
@@ -74,6 +91,8 @@ class BaseStreamBlock(StreamBlock):
     image_block = ImageBlock()
     code = CodeBlock(label='Code')
     block_quote = BlockQuote()
+    embed_image = EmbedImageBlock()
+    embed_video = EmbedVideoBlock()
     embed_block = EmbedBlock(
         help_text="Insert an embed URL e.g https://www.youtube.com/watch?v=SGJFWirQ3ks",
         icon="media",
