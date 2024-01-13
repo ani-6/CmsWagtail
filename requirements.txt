@@ -1,4 +1,4 @@
-Django>=4.2,<4.3
-wagtail>=5.0,<5.1
-wagtail-font-awesome-svg == 0.0.3
-wagtailcodeblock == 1.29.0.0
+Django == 5.0
+wagtail == 5.2.2
+wagtail-font-awesome-svg == 1.0.1
+wagtailcodeblock == 1.29.0.1
